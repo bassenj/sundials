@@ -523,7 +523,7 @@ module fcvode_mod
        use, intrinsic :: iso_c_binding
        implicit none
        type(c_ptr), value :: cvode_mem
-       integer(c_int)     :: rootsfound
+       integer(c_int)     :: rootsfound(*)
      end function FCVodeGetRootInfo
 
      integer(c_int) function FCVodeGetIntegratorStats(cvode_mem, nsteps, nfevals, &
